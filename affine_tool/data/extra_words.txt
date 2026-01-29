@@ -1,4 +1,0 @@
-# Add new common words here (one word per line) to improve brute-force accuracy over time.
-# Example:
-# hello
-# world

@@ -3,16 +3,19 @@
 A clean, modular command-line toolkit for working with the **Affine Cipher**.  
 This project supports encryption, decryption, and dictionary-based brute-force cryptanalysis, and is designed to be **extensible, interactive, and self-improving over time**.
 
-> **Latest release:** v2.0.0
+> **Latest release:** v2.1.0
 
 ---
 
-## Highlights (v2.0)
+## v2.1.0 — Correction Feedback Loop
 
-- **Growth Mode**: optionally learn new words from confirmed correct decryptions
-- **Colorized CLI output** for clearer and more readable interaction
-- Persistent menu loop with explicit exit option
-- Improved usability for long-term experimentation
+### Highlights
+- Added an interactive **correction workflow** in Growth Mode: when the top brute-force candidate is incorrect, users can provide the correct plaintext.
+- The corrected plaintext is immediately returned and its high-information words are added to the external dictionary, improving future cracking accuracy.
+
+### Details
+- If the user marks the #1 candidate as **F**, the tool prompts for a corrected plaintext (or corrected words), then updates `data/extra_words.txt`.
+- This creates a feedback loop that reduces repeated mistakes on similar text patterns over time.
 
 ---
 
